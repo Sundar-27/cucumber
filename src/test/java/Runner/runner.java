@@ -1,0 +1,16 @@
+package Runner;
+
+
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+import org.junit.runner.RunWith;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(features = "src/test/java/feature",
+                           glue ={"Stepdefinition"},
+                          tags ="@jenkins",
+plugin = {"pretty","json:target/cucumber-reports/report.json","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"})
+
+
+public class runner {
+}
